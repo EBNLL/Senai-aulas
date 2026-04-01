@@ -9,7 +9,7 @@ programa {
     real mediaDeValorRecebido =  valorTotalRecebido / 2, mediaDeTempoTrabalhado =  totalDeTempoTrabalhado / 2
     escreva("\nEssa foi a média de valor recebido dos PF e PJ: R$" + mediaDeValorRecebido)
 
-    escreva("\nEssa foi a media de tempo que kowalski trabalhou em seus relatórios: " +  mediaDeTempoTrabalhado)
+    escreva("\nEssa foi a media de tempo que kowalski trabalhou em seus relatórios: " +  mediaDeTempoTrabalhado + "H")
 
   }
 }
