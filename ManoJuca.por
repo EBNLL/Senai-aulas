@@ -25,6 +25,7 @@ programa {
   leia(streaming)
   escreva("\nQuanto Mano juca gasta com telefone? R$")
   leia(telefone)
+  limpa()
   
   real sobrou = salario - moradia - agua - luz - internet - gasolina - streaming - telefone
 
