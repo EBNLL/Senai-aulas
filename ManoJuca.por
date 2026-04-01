@@ -29,7 +29,9 @@ programa {
   
   real sobrou = salario - moradia - agua - luz - internet - gasolina - streaming - telefone
 
-  escreva("\nMano Juca ainda tem R$" + sobrou + " restante")
+  escreva("Mano Juca teve um salário de R$" + salario)
+  
+  escreva("\nMano Juca agora possui R$" + sobrou + " restante")
   
     
   }
