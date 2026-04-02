@@ -34,15 +34,24 @@ programa {
 
     escreva("Essa é a quantidade total de relatórios feito por Kowalski: " +  totalDeRelatorios)
     
-    escreva("\n\nEsse foi o tempo que Kowalski trablhou em seus relatórios: " + totalDeTempoTrabalhado)
+    escreva("\n\nEsse foi o tempo que Kowalski trablhou em seus relatórios: " + totalDeTempoTrabalhado + "H")
 
     escreva("\n\nEsse foi o valor recebido pelos PF e PJ: R$" + valorTotalRecebido)
     
-    real mediaDeValorRecebido =  valorTotalRecebido / 2, mediaDeTempoTrabalhado =  totalDeTempoTrabalhado / 2
+    real mediaDeValorRecebido =  valorTotalRecebido / 2
+    real mediaDeTempoTrabalhado =  totalDeTempoTrabalhado / 2
+    real valorPorRelatorioPF = valorRecebidoPF / relatoriosParaPF
+    real valorPorRelatorioPJ = valorRecebidoPJ / relatoriosParaPJ
+
+
     
     escreva("\n\nEssa foi a média de valor recebido dos PF e PJ: R$" + mediaDeValorRecebido)
 
-    escreva("\n\nEssa foi a media de tempo que kowalski trabalhou em seus relatórios: " +  mediaDeTempoTrabalhado + "H")
+    escreva("\n\nEssa foi a média de tempo que kowalski trabalhou em seus relatórios: " +  mediaDeTempoTrabalhado + "H")
+
+    escreva("\n\nEssa foi a média de quanto recebeu cada PF por relatório: R$" + valorPorRelatorioPF)
+    
+    escreva("\n\nEssa foi a média de quanto recebeu cada PJ por relatório: R$" + valorPorRelatorioPJ)
 
   }
 }
