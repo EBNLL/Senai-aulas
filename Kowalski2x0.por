@@ -15,7 +15,7 @@ programa {
     escreva("\nQuanto tempo levou para fazer os relatórios PF? ")
     leia(tempoParaElaborarRelatorioPF)
     
-    escreva("\nQual o valor recebeu PF? ")
+    escreva("\nQual o valor recebeu PF? R$")
     leia(valorRecebidoPF)
     
     escreva("\nQuantos relatórios PJ kowalski fez? ")
@@ -24,7 +24,7 @@ programa {
     escreva("\nQuanto tempo levou para fazer os relatórios PJ? ")
     leia(tempoParaElaborarRelatorioPJ)
     
-    escreva("\nQual o valor recebeu PJ? ")
+    escreva("\nQual o valor recebeu PJ? R$")
     leia(valorRecebidoPJ)
     limpa()
 
@@ -42,12 +42,17 @@ programa {
     real mediaDeTempoTrabalhado =  totalDeTempoTrabalhado / 2
     real valorPorRelatorioPF = valorRecebidoPF / relatoriosParaPF
     real valorPorRelatorioPJ = valorRecebidoPJ / relatoriosParaPJ
-
+    real mediaDeTempoPF = tempoParaElaborarRelatorioPF / relatoriosParaPF
+    real mediaDeTempoPJ = tempoParaElaborarRelatorioPJ / relatoriosParaPJ
 
     
     escreva("\n\nEssa foi a média de valor recebido dos PF e PJ: R$" + mediaDeValorRecebido)
 
     escreva("\n\nEssa foi a média de tempo que kowalski trabalhou em seus relatórios: " +  mediaDeTempoTrabalhado + "H")
+    
+    escreva("\n\nEssa foi a média de tempo que kowalski trabalhou em seus relatórios PF: " +  mediaDeTempoPF + "H")
+    
+    escreva("\n\nEssa foi a média de tempo que kowalski trabalhou em seus relatórios PJ: " +  mediaDeTempoPJ + "H")
 
     escreva("\n\nEssa foi a média de quanto recebeu cada PF por relatório: R$" + valorPorRelatorioPF)
     
