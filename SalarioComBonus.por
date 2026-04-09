@@ -18,7 +18,7 @@ programa {
     real salario =  (vendas * comissao) + salarioFixo
 
     escreva("Nome: " + nome)
-    escreva("\nSeu salário bônus é R$" + salario)
+    escreva("\nSeu salário é R$" + salario)
   }
 
 }
