@@ -9,7 +9,7 @@ programa {
     escreva("3- JavaScript para leigos\n")
     escreva("4- Tópicos avançados\n")
     escreva("5- Vida e carreira\n")
-    escreva("Qual o palestra você quer participar?")
+    escreva("Qual o palestra você quer participar? ")
     leia(palestra)
 
     se(palestra == 1){
