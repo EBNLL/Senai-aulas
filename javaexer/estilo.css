@@ -3,10 +3,19 @@ body{
 }
 h1{
     color: white;
+
+}
+h2{
+    color: white;
+}
+button:hover{
+    background-color: rgb(156, 3, 3);
 }
 button{
     color: white;
     background-color: rgb(54, 52, 52);
+    margin: 4px;
+    border-color: rgb(139, 123, 123);
 }
 output{
     color: white;
