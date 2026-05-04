@@ -97,7 +97,43 @@ function surumano3(){
             document.getElementById("resultado").innerHTML = "Transporte liberado para uso."
         }
     }
-
+    
     function denis(){
+        let cracha, digital
+        
+        cracha = Number(prompt("Qual o número do seu crachá?"))
+        
+        if(cracha > 0){
+            cracha = confirm(cracha + ", Crachá válido?")
+            digital = confirm("Digital valida?")
+        }
+        if(cracha == true && digital == true){
+            document.getElementById("resultado").innerHTML = "Acesso permitido."
+        }
+        else{
+            document.getElementById("resultado").innerHTML = "Acesso negado."
+            document.getElementById("resultado").innerHTML = "Acesso negado."
+        }
+    }  
+    
+    function junin(){
+        let visitantes, hora
+        
+        visitantes = confirm("Tem algum visitante no local? Ok: sim, cancelar: não")
+        hora = confirm("Horário fora do expediente? Ok: sim, cancelar: não")
+        
+        if(visitantes == false && hora == true){
+            document.getElementById("resultado").innerHTML = "Liberação autorizada. Abrindo jaula."
+        }
+        else{
+            document.getElementById("resultado").innerHTML = "Liberação negada. Área em uso ou fora do horário permitido."
+        }
+    }
+
+    function telles(){
         
     }
+
+
+
+        
