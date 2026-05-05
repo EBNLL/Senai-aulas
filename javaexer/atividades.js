@@ -168,9 +168,35 @@ function surumano3(){
         }
     }
 
+    function mostrarDiaDaSemana(){
+        let numero, dia
 
+        numero = Number(prompt("Digita o número:"))
 
-
-
-
-        
+        if(numero == 1){
+            dia = "Domingo"
+        }
+        else if(numero == 2){
+            dia = "Segunda"
+        }
+        else if(numero == 3){
+            dia = "Terça"
+        }
+        else if(numero == 4){
+            dia = "Quarta"
+        }
+        else if(numero == 5){
+            dia = "Quinta"
+        }
+        else if(numero == 6){
+            dia = "Sexta"
+        }
+        else if(numero == 7){
+            dia = "Sábado"
+        }
+        else{
+            dia = "Erro 404#, dia não encontrado!"
+        }
+        document.getElementById("resultado").innerHTML = dia
+    }
+    
