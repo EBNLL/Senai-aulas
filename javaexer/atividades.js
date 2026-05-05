@@ -129,10 +129,47 @@ function surumano3(){
             document.getElementById("resultado").innerHTML = "Liberação negada. Área em uso ou fora do horário permitido."
         }
     }
-
+    
     function telles(){
+        let peso, distancia, volume, frete
         
+        peso = Number(prompt("Qual o peso em kg?"))
+        distancia = Number(prompt("Qual a distância em km?"))
+        volume = Number(prompt("Quantos volumes são?"))
+        
+        frete = Number(15 + (2 * peso) + (0.05 * distancia) + (10 * volume))
+        
+        document.getElementById("resultado").innerHTML = "Frete: " + frete
     }
+    
+    function donabete(){
+        let bruto, presentes, premiacao, comissao, total
+        
+        bruto = Number(prompt("Quanto Dona Bete recebeu?"))
+        premiacao = Number(prompt("Quanto Dona Bete pagou em premiações?"))
+        presentes = Number(prompt("Quanto Dona Bete pagou em presentes?"))
+        comissao = Number(prompt("Quanto Dona Bete pagou em comissão?"))
+        
+        total = Number(bruto - premiacao - presentes - comissao)
+        document.getElementById("resultado").innerHTML = "Sobrou: R$" + total
+    }
+
+    function adivinha(){
+        let numero = Math.ceil(Math.random() * 10)
+        let chute
+
+        chute = Number(prompt("Chute um número:"))
+
+        if(chute == numero){
+            resultado.innerHTML = "Acertou! " + numero
+        }
+        else{
+            resultado.innerHTML = "ERROU! " + numero
+        }
+    }
+
+
+
 
 
 

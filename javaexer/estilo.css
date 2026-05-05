@@ -3,19 +3,21 @@ body{
 }
 h1{
     color: white;
-
+    text-align: center;
 }
 h2{
     color: white;
 }
 button:hover{
     background-color: rgb(156, 3, 3);
+    border-radius: 10px;
 }
 button{
     color: white;
     background-color: rgb(54, 52, 52);
     margin: 4px;
     border-color: rgb(139, 123, 123);
+    cursor: grab;   
 }
 output{
     color: white;
