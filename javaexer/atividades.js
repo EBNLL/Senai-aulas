@@ -155,7 +155,7 @@ function surumano3(){
     }
 
     function adivinha(){
-        let numero = Math.ceil(Math.random() * 10)
+        let numero = Math.ceil(Math.random() * 100)
         let chute
 
         chute = Number(prompt("Chute um número:"))
@@ -197,6 +197,28 @@ function surumano3(){
         else{
             dia = "Erro 404#, dia não encontrado!"
         }
-        document.getElementById("resultado").innerHTML = dia
+        resultado.innerHTML = dia
     }
     
+    function pePequeno(){
+        let preco, quantidade, valeTroca
+
+        quantidade = Number(prompt("Quantidade de calçados:"))
+        preco = Number(prompt("Qual o preço dos calçados:"))
+
+        valeTroca = Number(quantidade * preco)
+
+        resultado.innerHTML = "Vale troca: R$" + valeTroca
+    }
+
+    function guilherme(){
+        let clt, estagiarios, pj, total
+
+        clt = Number(prompt("Quantas pessoas são clt?"))
+        estagiarios = Number(prompt("Quantas pessoas são estagiários"))
+        pj = Number(prompt("Quantas pessoas são pj?"))
+
+        total = clt + estagiarios + pj
+
+        resultado.innerHTML = "Total de pessoas na empresa: " + total
+    }
