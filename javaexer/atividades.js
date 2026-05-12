@@ -247,11 +247,37 @@ function surumano3(){
     }
 
     function starUber(){
-        let km, tempoDeViegem
-
+        let km, tempoDeViagemEmS, tempoEmMinutos, tempoEmHoras, tempoEmDias, tempoEmMeses, tempoEmAnos
+        velocidade = 300000
         km = Number(prompt("Quantos km você vai viajar?"))
 
-        tempoDeViegem = km / 300000
-
-        resultado.innerHTML = "Você vai chegar em " + tempoDeViegem + "s"
+        tempoDeViagemEmS = km / velocidade
+        
+        resultado.innerHTML = "<br>Você vai chegar em " + tempoDeViagemEmS + "s"
+        
+        if(tempoDeViagemEmS > 60){
+        tempoEmMinutos = tempoDeViagemEmS / 60
+        resultado.innerHTML += "<br>Ou " + tempoEmMinutos + "m"
     }
+    
+        if(tempoEmMinutos > 60){
+        tempoEmHoras = tempoEmMinutos / 60
+        resultado.innerHTML += "<br>Ou " + tempoEmHoras + "h"
+    }
+    
+        if(tempoEmHoras > 24){
+        tempoEmDias = tempoEmHoras / 24
+        resultado.innerHTML += "<br>Ou " + tempoEmDias + " Dias"
+    }
+    
+        if(tempoEmDias > 30){
+        tempoEmMeses = tempoEmDias / 30
+        resultado.innerHTML += "<br>Ou " + tempoEmMeses + " Meses"
+    }
+    
+        if(tempoEmMeses > 12){
+        tempoEmAnos = tempoEmMeses / 12
+        resultado.innerHTML += "<br>Ou " + tempoEmAnos + " Anos"
+
+    }
+}
