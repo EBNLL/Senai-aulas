@@ -278,6 +278,5 @@ function surumano3(){
         if(tempoEmMeses > 12){
         tempoEmAnos = tempoEmMeses / 12
         resultado.innerHTML += "<br>Ou " + tempoEmAnos + " Anos"
-
     }
 }
