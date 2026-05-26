@@ -1,15 +1,19 @@
-let valorTotal, valorDoRepasse, valorFaturado, clientes = 0, descontos
+let valorTotal, valorDoRepasse, valorFaturado, clientes = 0, descontos,faturamentoNormal = 0
 
-function totalRecebido(){
+function repasseNormal(){
         
         clientes++
         valorTotal = Number(document.getElementById("totalv").value)
         valorDoRepasse = valorTotal * 0.10
         valorFaturado = valorTotal - valorDoRepasse
+        faturamentoNormal = valorFaturado + faturamentoNormal
+        faturamentoOficina = faturamentoNormal + faturamentoSeg
         document.getElementById("valort").innerHTML = "Valor do recibo: R$" + valorTotal
         document.getElementById("repassec").innerHTML = "Valor do repasse para o Seu Celso: R$" + valorDoRepasse
         document.getElementById("desconto").innerHTML = "Valor faturado: R$" + valorFaturado
+        document.getElementById("faturamenton").innerHTML = "Valor total faturado: R$" + faturamentoNormal
         document.getElementById("clientela").innerHTML = "Clientes: " + clientes
+        document.getElementById('faturaof').innerHTML = 'Valor Total Faturado da oficina: R$' + faturamentoOficina
         
         if(clientes == 10){
             descontos = valorTotal * 0.05
@@ -22,6 +26,18 @@ function totalRecebido(){
             
         }
             
+    }
+        let faturamentoOficina = 0, faturamentoSeg = 0
+    function repasseSeguradoras(){
+        let valorSeguradoras, descontoSeg, descontosGlobal
+        valorSeguradoras = Number(document.getElementById("totalv").value)
+        descontoSeg = valorSeguradoras * 0.3
+        descontosGlobal = valorSeguradoras - descontoSeg
+        faturamentoSeg = descontosGlobal + faturamentoSeg
+        faturamentoOficina = faturamentoNormal + faturamentoSeg
+        document.getElementById('totals').innerHTML = "Valor Faturado por Seguradora: R$" + descontosGlobal
+        document.getElementById('faturaseg').innerHTML = "Valor Total Faturado por seguradora: R$" + faturamentoSeg
+        document.getElementById('faturaof').innerHTML = 'Valor Total Faturado da oficina: R$' + faturamentoOficina
     }
     
 
