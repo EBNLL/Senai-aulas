@@ -13,20 +13,23 @@
         
         <div id="btns-pag">
             
-            <button onclick="proximaTela()">Proxima</button>
             <button onclick="telaAnterior()">Anterior</button>
+            <button onclick="proximaTela()">Proxima</button>
             
         </div>
+        <hr>
 
     <section class="tela" id="tela1">
 
+        <h1>Oficina</h1>
+
         <input type="text" id="totalv">
-        <div id="azul">
+        <div id="btns-oficina">
             <button onclick="repasseNormal()">Lançamento</button>
             <button onclick="repasseSeguradoras()">Lançamento Seguradoras</button>
         </div>
         
-        <div id="macaco">
+        <div id="oficina-repasse">
             <output id="valort">Valor do recibo: R$</output>
             <output id="repassec">Valor do repasse para o Seu Celso: R$</output>
             <output id="desconto">Valor faturado: R$</output>
@@ -34,7 +37,7 @@
             <output id="desconte"></output>
             <output id="faturamenton">Valor total faturado: R$ </output>
         </div>
-        <div id="balao">
+        <div id="oficina-seguros">
             <output id="totals">Valor Faturado por Seguradora: R$</output>
             <output id="faturaseg">Valor Total Faturado por seguradora: R$</output>
             <output id="faturaof">Valor Total Faturado da oficina: R$</output>
@@ -50,7 +53,7 @@
     <button onclick="apostar()">Apostar</button>
 </div>
 
-<div id="btns">
+<div id="btns-dinos">
     
     <button onclick="espinossauro()">Espinossauro</button>
     <button onclick="tRex()">T-rex</button>
@@ -63,39 +66,46 @@
     <button onclick="alessauro()">Alossauro</button>
     <button onclick="carnotouro()">Carnotouro</button>
 </div>
-<br>
-<output id ="dinheiro">R$</output>
-<br>
-<output id ="dino">Dinossauro escolhido:</output>
-<br>
-<output id ="dino_sorte">Dinossauro sorteado:</output>
+<hr>
+<div id="out-dinos">
+
+    <output id ="dinheiro">R$</output>
+    <output id ="dino">Dinossauro escolhido:</output>
+    <output id ="dino_sorte">Dinossauro sorteado:</output>
+
+</div>
 
 </section>
 
 <section class="tela" id="tela3">
-
+<div id="pag-dados">
+    <h1>Jogo dos Dados</h1>
     <output id="valordados">Total: 0</output>
-    <br>
-    <button onclick="rolagemd4()">d4</button>
-    <button onclick="rolagemd6()">d6</button>
-    <button onclick="rolagemd10()">d10</button>
-    <button onclick="rolagemd12()">d12</button>
-    <br>
+    <div id="btns-dados">
+        
+        <button onclick="rolagemd4()">d4</button>
+        <button onclick="rolagemd6()">d6</button>
+        <button onclick="rolagemd10()">d10</button>
+        <button onclick="rolagemd12()">d12</button>
+        
+    </div>
     <div id="listadados">Valores: 
         <br>
     </div> 
+</div>
 </section>
     
     
     
     <section class="tela" id="tela4">
-
-        <h1>Variaveis</h1>
-        <p id="totalVendas">Total de vendas: R$0,00</p>  
-        Valor: R$
-        <input type="text" id="valorVenda">
-        <button onclick="registrarVenda()">Cadastrar</button>
-        <div id="listaValor"></div>
+        <div id="registroVendas">
+            <h1>Variaveis</h1>
+            <p id="totalVendas">Total de vendas: R$0,00</p>  
+            Valor: R$
+            <input type="text" id="valorVenda">
+            <button onclick="registrarVenda()">Cadastrar</button>
+        </div>
+            <div id="listaValor"></div>
         
     </section>
     

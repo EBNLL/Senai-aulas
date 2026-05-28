@@ -4,4 +4,77 @@
 .ativa{
     display: block;
 }
+#pag-dados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    flex-direction: column;
+    gap: 5px;
+}
+#btns-dados{
+    display: flex;
+    gap: 5px;
+}
+#btns-dinos{
+    display: flex;
+    flex-direction: column;
+    width: 243px;
+    margin-top: 5px;
+    gap: 5px;
+}
+#out-dinos{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 5px;
+}
+#btns-pag{
+    display: flex;
+    justify-content: center;
+}
+#btns-oficina{
+    margin-top: 5px;
+}
+#oficina-repasse{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 5px;
+}
+#oficina-seguros{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 5px;
+}
+button{
+    background-color: rgb(54, 52, 52);
+    color: white;
+    border-color: gray;
+}
+button:hover{
+    background-color: rgb(167, 29, 29);
+    cursor: grab;
+}
+button:active{
+    cursor: grabbing;
+}
+body{
+    background-color: rgb(54, 52, 52);
+}
+output{
+    color: white;
+}
+
+p{
+    color: white;
+}
+h1{
+    color: white;
+}
+div{
+    color: white;
+}
+
 
