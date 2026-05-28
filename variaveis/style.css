@@ -1,54 +1,7 @@
-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(180, 223, 236);
+.tela{
+    display: none;
 }
-#azul{
-    margin-top: 10px;
-    display: flex;
-}
-#vermelho{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-#macaco{
-    display: flex;
-    text-align: center;
-    margin-top: 10px;
-
-}
-
-#balao{
-    display: flex;
-    
-
-
-}
-
-#totalv{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgb(233, 199, 253);
-    color: rgb(0, 0, 0);
-    border-color: rgb(184, 146, 255);
-    text-align: center;
-}
-#totalv:active{
-    border-color: blueviolet;
-    cursor: grabbing;
-
-}
-
-button{
-    border-radius: 01%;
-    border-style: double;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    width: 120px;
+.ativa{
+    display: block;
 }
 

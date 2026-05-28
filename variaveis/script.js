@@ -1,3 +1,40 @@
+const telas = document.querySelectorAll(".tela")
+let paginaAtual = 0
+
+function mostrarTela(index){
+    telas.forEach(function(tela){
+        tela.classList.remove('ativa')
+    });
+       telas[index].classList.add('ativa') 
+
+}
+
+function proximaTela(){
+
+    paginaAtual++;
+
+    if(paginaAtual >= telas.length){
+        paginaAtual = 0;
+    }
+    mostrarTela(paginaAtual);
+}
+
+function telaAnterior(){
+
+    paginaAtual--;
+
+    if(paginaAtual < 0){
+
+        paginaAtual = telas.length - 1;
+    }
+    mostrarTela(paginaAtual);
+}
+
+mostrarTela(0)
+
+
+
+
 let valorTotal, valorDoRepasse, valorFaturado, clientes = 0, descontos,faturamentoNormal = 0
 
 function repasseNormal(){
@@ -39,245 +76,205 @@ function repasseNormal(){
         document.getElementById('faturaseg').innerHTML = "Valor Total Faturado por seguradora: R$" + faturamentoSeg
         document.getElementById('faturaof').innerHTML = 'Valor Total Faturado da oficina: R$' + faturamentoOficina
     }
+
+let numeroSorteio, valorAposta
+
+function apostar(){
     
+    valorAposta = Number(document.getElementById("barraAposta").value)
+    numeroSorteio = Number(Math.ceil(Math.random()*10))
+    console.log(numeroSorteio)
+    document.getElementById("dinheiro").innerHTML = "R$" + valorAposta
 
-  
+}
 
+function espinossauro(){
 
+        document.getElementById("dino").innerHTML = "Dinossauro escolhido: Espinossauro"
+        if(numeroSorteio == 1){
+            valorAposta = valorAposta * 2
+            document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+            dinoSorteado()
+        }
+        else{
+            valorAposta = 0
+            document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+            dinoSorteado()
+        } 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let numeroSorteio, valorAposta
-
-// function apostar(){
+    }
     
-//     valorAposta = Number(document.getElementById("barraAposta").value)
-//     numeroSorteio = Number(Math.ceil(Math.random()*10))
-//     console.log(numeroSorteio)
-
-// }
-
-// function espinossauro(){
-
-//         document.getElementById("dino").innerHTML = "Dinossauro escolhido: Espinossauro"
-//         if(numeroSorteio == 1){
-//             valorAposta = valorAposta * 2
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//             dinoSorteado()
-//         }
-//         else{
-//             valorAposta = 0
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//             dinoSorteado()
-//         } 
-
-//     }
-    
-//     function tRex(){
+    function tRex(){
         
-//         document.getElementById("dino").innerHTML = "Dinossauro escolhido: T-rex"
-//         if(numeroSorteio == 2){
-//             valorAposta = valorAposta * 2
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//             dinoSorteado()
-//         }
-//         else{
-//             valorAposta = 0
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//             dinoSorteado()
-//         }   
-//     }
+        document.getElementById("dino").innerHTML = "Dinossauro escolhido: T-rex"
+        if(numeroSorteio == 2){
+            valorAposta = valorAposta * 2
+            document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+            dinoSorteado()
+        }
+        else{
+            valorAposta = 0
+            document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+            dinoSorteado()
+        }   
+    }
     
-//     function branquiossauro(){
-//         document.getElementById("dino").innerHTML = "Dinossauro escolhido: Branquiossauro"
-//         if(numeroSorteio == 3){
-//             valorAposta = valorAposta * 2
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valor
-//             dinoSorteado()
-//         }
-//         else{
-//             valorAposta = 0
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//             dinoSorteado()
-//         }   
-//     }
+    function branquiossauro(){
+        document.getElementById("dino").innerHTML = "Dinossauro escolhido: Branquiossauro"
+        if(numeroSorteio == 3){
+            valorAposta = valorAposta * 2
+            document.getElementById("dinheiro").innerHTML = "R$ " + valor
+            dinoSorteado()
+        }
+        else{
+            valorAposta = 0
+            document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+            dinoSorteado()
+        }   
+    }
     
-//     function velocirraptor(){
-//         document.getElementById("dino").innerHTML = "Dinossauro escolhido: Velocirraptor"
-//         if(numeroSorteio == 4){
-//             valorAposta = valorAposta * 2
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//             dinoSorteado()
-//         }
-//         else{
-//             valorAposta = 0
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//             dinoSorteado()
-//         }   
-//     }
+    function velocirraptor(){
+        document.getElementById("dino").innerHTML = "Dinossauro escolhido: Velocirraptor"
+        if(numeroSorteio == 4){
+            valorAposta = valorAposta * 2
+            document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+            dinoSorteado()
+        }
+        else{
+            valorAposta = 0
+            document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+            dinoSorteado()
+        }   
+    }
     
-//     function estegossauro(){
-//         document.getElementById("dino").innerHTML = "Dinossauro escolhido: Estegossauro"
-//         if(numeroSorteio == 5){
-//             valorAposta = valorAposta * 2
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//             dinoSorteado()
-//         }
-//         else{
-//             valorAposta = 0
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//             dinoSorteado()
-//         }   
-//     }
+    function estegossauro(){
+        document.getElementById("dino").innerHTML = "Dinossauro escolhido: Estegossauro"
+        if(numeroSorteio == 5){
+            valorAposta = valorAposta * 2
+            document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+            dinoSorteado()
+        }
+        else{
+            valorAposta = 0
+            document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+            dinoSorteado()
+        }   
+    }
     
-//     function triceratopo(){
-//         document.getElementById("dino").innerHTML = "Dinossauro escolhido: Triceratopo"
-//         if(numeroSorteio == 6){
-//             valorAposta = valorAposta * 2
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//             dinoSorteado()
-//         }
-//         else{
-//             valorAposta = 0
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//             dinoSorteado()
-//         }   
-//     }
+    function triceratopo(){
+        document.getElementById("dino").innerHTML = "Dinossauro escolhido: Triceratopo"
+        if(numeroSorteio == 6){
+            valorAposta = valorAposta * 2
+            document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+            dinoSorteado()
+        }
+        else{
+            valorAposta = 0
+            document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+            dinoSorteado()
+        }   
+    }
     
-//     function anquilossauro(){
-//         document.getElementById("dino").innerHTML = "Dinossauro escolhido: Anquilossauro"
-//         if(numeroSorteio == 7){
-//             valorAposta = valorAposta * 2
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//             dinoSorteado()
-//         }
-//         else{
-//             valorAposta = 0
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//             dinoSorteado()
-//         }   
-//     }
+    function anquilossauro(){
+        document.getElementById("dino").innerHTML = "Dinossauro escolhido: Anquilossauro"
+        if(numeroSorteio == 7){
+            valorAposta = valorAposta * 2
+            document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+            dinoSorteado()
+        }
+        else{
+            valorAposta = 0
+            document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+            dinoSorteado()
+        }   
+    }
     
-//     function parassauroloio(){
-//         document.getElementById("dino").innerHTML = "Dinossauro escolhido: Parassauroloio"
-//         if(numeroSorteio == 8){
-//             valorAposta = valorAposta * 2
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//             dinoSorteado()
-//         }
-//         else{
-//             valorAposta = 0
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//             dinoSorteado()
-//         }     
-//     }
+    function parassauroloio(){
+        document.getElementById("dino").innerHTML = "Dinossauro escolhido: Parassauroloio"
+        if(numeroSorteio == 8){
+            valorAposta = valorAposta * 2
+            document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+            dinoSorteado()
+        }
+        else{
+            valorAposta = 0
+            document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+            dinoSorteado()
+        }     
+    }
     
-//     function alessauro(){
-//         document.getElementById("dino").innerHTML = "Dinossauro escolhido: Alessauro"
-//         if(numeroSorteio == 9){
-//             valorAposta = valorAposta * 2
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//             dinoSorteado()
-//         }
-//         else{
-//             valorAposta = 0
-//             document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//             dinoSorteado()
-//         }   
+    function alessauro(){
+        document.getElementById("dino").innerHTML = "Dinossauro escolhido: Alessauro"
+        if(numeroSorteio == 9){
+            valorAposta = valorAposta * 2
+            document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+            dinoSorteado()
+        }
+        else{
+            valorAposta = 0
+            document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+            dinoSorteado()
+        }   
         
-//     }
+    }
     
-//     function carnotouro(){
-//         document.getElementById("dino").innerHTML = "Dinossauro escolhido: Carnotouro"
-//         if(numeroSorteio == 10){
-//             valorAposta = valorAposta * 2
-//        document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//        dinoSorteado()
-//     }
-//     else{
-//         valorAposta = 0
-//         document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
-//         dinoSorteado()
-//     }   
-// }
+    function carnotouro(){
+        document.getElementById("dino").innerHTML = "Dinossauro escolhido: Carnotouro"
+        if(numeroSorteio == 10){
+            valorAposta = valorAposta * 2
+       document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+       dinoSorteado()
+    }
+    else{
+        valorAposta = 0
+        document.getElementById("dinheiro").innerHTML = "R$ " + valorAposta
+        dinoSorteado()
+    }   
+}
 
-//     function dinoSorteado(){
-//     if(numeroSorteio == 1){
+    function dinoSorteado(){
+    if(numeroSorteio == 1){
         
-//         document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Espinossauro"
-//     }
-//     if(numeroSorteio == 2){
+        document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Espinossauro"
+    }
+    if(numeroSorteio == 2){
         
-//         document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: T-rex"
-//     }
-//     if(numeroSorteio == 3){
+        document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: T-rex"
+    }
+    if(numeroSorteio == 3){
         
-//         document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Branquiossauro"
-//     }
-//     if(numeroSorteio == 4){
+        document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Branquiossauro"
+    }
+    if(numeroSorteio == 4){
         
-//         document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Velocirraptor"
-//     }
-//     if(numeroSorteio == 5){
+        document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Velocirraptor"
+    }
+    if(numeroSorteio == 5){
         
-//         document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Estegossauro"
-//     }
-//     if(numeroSorteio == 6){
+        document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Estegossauro"
+    }
+    if(numeroSorteio == 6){
         
-//         document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Triceratopo"
-//     }
-//     if(numeroSorteio == 7){
+        document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Triceratopo"
+    }
+    if(numeroSorteio == 7){
         
-//         document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Anquilossauro"
-//     }
-//     if(numeroSorteio == 8){
+        document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Anquilossauro"
+    }
+    if(numeroSorteio == 8){
         
-//         document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Parassauro"
-//     }
-//     if(numeroSorteio == 9){
+        document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Parassauro"
+    }
+    if(numeroSorteio == 9){
         
-//         document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Alossauro"
-//     }
-//     if(numeroSorteio == 10){
+        document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Alossauro"
+    }
+    if(numeroSorteio == 10){
         
-//         document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Carnotouro"
-//     }
+        document.getElementById("dino_sorte").innerHTML = "Dinossauro sorteado: Carnotouro"
+    }
     
-//     }
+    }
 
 
 
@@ -287,62 +284,43 @@ function repasseNormal(){
 
 
 
-// function enterbarra(e){
+function enterbarra(e){
 
-// if(e.key == "Enter"){
-//     registrarVenda()
-// }
-// }
-
-
+if(e.key == "Enter"){
+    registrarVenda()
+}
+}
 
 
+let numeroAleatorio
+let total = 0
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let numeroAleatorio
-// let total = 0
-
-// function rolagemd4(){
-//     numeroAleatorio = Number(Math.ceil(Math.random()*4))
-//     total = total + numeroAleatorio
-//     document.getElementById("valordados").innerHTML = "Total: " + total
-//     document.getElementById("listadados").innerHTML += numeroAleatorio + "<br>"
-// }
-// function rolagemd6(){
-//     numeroAleatorio = Number(Math.ceil(Math.random()*6))
-//     total = total + numeroAleatorio
-//     document.getElementById("valordados").innerHTML = "Total: " + total
-//     document.getElementById("listadados").innerHTML += numeroAleatorio + "<br>"
+function rolagemd4(){
+    numeroAleatorio = Number(Math.ceil(Math.random()*4))
+    total = total + numeroAleatorio
+    document.getElementById("valordados").innerHTML = "Total: " + total
+    document.getElementById("listadados").innerHTML += numeroAleatorio + "<br>"
+}
+function rolagemd6(){
+    numeroAleatorio = Number(Math.ceil(Math.random()*6))
+    total = total + numeroAleatorio
+    document.getElementById("valordados").innerHTML = "Total: " + total
+    document.getElementById("listadados").innerHTML += numeroAleatorio + "<br>"
     
-// }
-// function rolagemd10(){
-//     numeroAleatorio = Number(Math.ceil(Math.random()*10))
-//     total = total + numeroAleatorio
-//     document.getElementById("valordados").innerHTML = "Total: " + total
-//     document.getElementById("listadados").innerHTML += numeroAleatorio + "<br>"
+}
+function rolagemd10(){
+    numeroAleatorio = Number(Math.ceil(Math.random()*10))
+    total = total + numeroAleatorio
+    document.getElementById("valordados").innerHTML = "Total: " + total
+    document.getElementById("listadados").innerHTML += numeroAleatorio + "<br>"
     
-// }
-// function rolagemd12(){
-//     numeroAleatorio = Number(Math.ceil(Math.random()*12))
-//     total = total + numeroAleatorio
-//     document.getElementById("valordados").innerHTML = "Total: " + total
-//     document.getElementById("listadados").innerHTML += numeroAleatorio + "<br>"
-// }
+}
+function rolagemd12(){
+    numeroAleatorio = Number(Math.ceil(Math.random()*12))
+    total = total + numeroAleatorio
+    document.getElementById("valordados").innerHTML = "Total: " + total
+    document.getElementById("listadados").innerHTML += numeroAleatorio + "<br>"
+}
 
 
 
@@ -352,51 +330,51 @@ function repasseNormal(){
 
 
 
-// let cont = 0
-// let totalVendido = 0
-// function incrementarContagem(){
+let cont = 0
+let totalVendido = 0
+function incrementarContagem(){
     
-//     cont++
-//     document.getElementById("p-contagem").innerHTML = cont  
-// }
+    cont++
+    document.getElementById("p-contagem").innerHTML = cont  
+}
 
-// function subtrairContagem(){
+function subtrairContagem(){
     
-//     cont--
-//     document.getElementById("p-contagem").innerHTML = cont
-// }
-// function zerar(){
+    cont--
+    document.getElementById("p-contagem").innerHTML = cont
+}
+function zerar(){
     
-//     cont = cont - cont
-//     document.getElementById("p-contagem").innerHTML = cont
-// }
+    cont = cont - cont
+    document.getElementById("p-contagem").innerHTML = cont
+}
 
-// function registrarVenda(){
+function registrarVenda(){
     
-//     let valor = Number(document.getElementById("valorVenda").value)
-//     totalVendido = totalVendido + valor
+    let valor = Number(document.getElementById("valorVenda").value)
+    totalVendido = totalVendido + valor
    
-//     document.getElementById("totalVendas").innerHTML = "Valor: R$" + totalVendido.toFixed(2).replace('.',',') + "<br>"
-//     document.getElementById("listaValor").innerHTML += "R$" + valor.toFixed(2).replace('.',',') + "<br>"
-//     document.getElementById("valorVenda").value = ""
-//     document.getElementById("valorVenda").focus()
-// }
-//     document.getElementById("valorVenda").addEventListener("keyup", enterbarra)
+    document.getElementById("totalVendas").innerHTML = "Valor: R$" + totalVendido.toFixed(2).replace('.',',') + "<br>"
+    document.getElementById("listaValor").innerHTML += "R$" + valor.toFixed(2).replace('.',',') + "<br>"
+    document.getElementById("valorVenda").value = ""
+    document.getElementById("valorVenda").focus()
+}
+    document.getElementById("valorVenda").addEventListener("keyup", enterbarra)
 
 
 
 
-// let global = "Sou uma variável global"
-// function funcao1(){
-//     let local = "Sou uma variável local :D"    
+let global = "Sou uma variável global"
+function funcao1(){
+    let local = "Sou uma variável local :D"    
     
-//     console.log(local);
-//     console.log(global);
-// }
-// function funcao2(){
-//     console.log(global);
-//     // console.log(local);
-// }
-// // funcao1()
-// // funcao2()
+    console.log(local);
+    console.log(global);
+}
+function funcao2(){
+    console.log(global);
+    // console.log(local);
+}
+// funcao1()
+// funcao2()
 

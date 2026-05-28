@@ -7,7 +7,19 @@
     <title>var</title>
 </head>
 <body>
-    <section id="vermelho">
+
+    <section class="tela ativa" id="tela"></section>
+        
+        
+        <div id="btns-pag">
+            
+            <button onclick="proximaTela()">Proxima</button>
+            <button onclick="telaAnterior()">Anterior</button>
+            
+        </div>
+
+    <section class="tela" id="tela1">
+
         <input type="text" id="totalv">
         <div id="azul">
             <button onclick="repasseNormal()">Lançamento</button>
@@ -21,81 +33,48 @@
             <output id="clientela">Clientes: 0</output>
             <output id="desconte"></output>
             <output id="faturamenton">Valor total faturado: R$ </output>
+        </div>
+        <div id="balao">
             <output id="totals">Valor Faturado por Seguradora: R$</output>
             <output id="faturaseg">Valor Total Faturado por seguradora: R$</output>
             <output id="faturaof">Valor Total Faturado da oficina: R$</output>
         </div>
-        
-        
-    
 
     </section>
 
-        
-        
+    <section class="tela" id="tela2">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <h1>Dino da Sorte</h1>
-    <div id="pagina">
+        <h1>Dino da Sorte</h1>
+        <div id="pagina">
     <input type="text" id="barraAposta">
     <button onclick="apostar()">Apostar</button>
 </div>
-        
-        <div id="btns">
 
-        <button onclick="espinossauro()">Espinossauro</button>
-        <button onclick="tRex()">T-rex</button>
-        <button onclick="branquiossauro()">Branquiossauro</button>
-        <button onclick="velocirraptor()">Velocirraptor</button>
-        <button onclick="estegossauro()">Estegossauro</button>
-        <button onclick="triceratopo()">Triceratopo</button>
-        <button onclick="anquilossauro()">Anquilossauro</button>
-        <button onclick="parassauroloio()">Parassauro</button>
-        <button onclick="alessauro()">Alossauro</button>
-        <button onclick="carnotouro()">Carnotouro</button>
-    </div>
-        <br>
-    <output id ="dinheiro">R$</output>
-    <br>
-    <output id ="dino">Dinossauro escolhido:</output>
-    <br>
-    <output id ="dino_sorte">Dinossauro sorteado:</output>
+<div id="btns">
     
-     -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <!-- <output id="valordados">Total: 0</output>
+    <button onclick="espinossauro()">Espinossauro</button>
+    <button onclick="tRex()">T-rex</button>
+    <button onclick="branquiossauro()">Branquiossauro</button>
+    <button onclick="velocirraptor()">Velocirraptor</button>
+    <button onclick="estegossauro()">Estegossauro</button>
+    <button onclick="triceratopo()">Triceratopo</button>
+    <button onclick="anquilossauro()">Anquilossauro</button>
+    <button onclick="parassauroloio()">Parassauro</button>
+    <button onclick="alessauro()">Alossauro</button>
+    <button onclick="carnotouro()">Carnotouro</button>
+</div>
+<br>
+<output id ="dinheiro">R$</output>
+<br>
+<output id ="dino">Dinossauro escolhido:</output>
+<br>
+<output id ="dino_sorte">Dinossauro sorteado:</output>
+
+</section>
+
+<section class="tela" id="tela3">
+
+    <output id="valordados">Total: 0</output>
     <br>
     <button onclick="rolagemd4()">d4</button>
     <button onclick="rolagemd6()">d6</button>
@@ -104,25 +83,33 @@
     <br>
     <div id="listadados">Valores: 
         <br>
-    </div> -->
+    </div> 
+</section>
+    
+    
+    
+    <section class="tela" id="tela4">
 
+        <h1>Variaveis</h1>
+        <p id="totalVendas">Total de vendas: R$0,00</p>  
+        Valor: R$
+        <input type="text" id="valorVenda">
+        <button onclick="registrarVenda()">Cadastrar</button>
+        <div id="listaValor"></div>
+        
+    </section>
+    
+    <section class="tela" id="tela5">
 
-
-
-    <!-- <h1>Variaveis</h1>
-    <p id="totalVendas">Total de vendas: R$0,00</p>  
-    Valor: R$
-    <input type="text" id="valorVenda">
-    <button onclick="registrarVenda()">Cadastrar</button>
-    <div id="listaValor"></div>
-    <hr>
         <button onclick="incrementarContagem()">+</button>
         <button onclick="subtrairContagem()">-</button>
         <button onclick="zerar()">Resetar</button>
         <p id="p-contagem">
             0
         </p>
-    <hr> -->
+        <hr>
+    </section>
+    
     <script src="script.js"></script>
 </body>
 </html>
