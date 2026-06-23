@@ -103,7 +103,7 @@ function exercicio10(){
         total = total + (1/i)
         alert(total)
     }
-
+    
 }
 
 function exercicio11(){
