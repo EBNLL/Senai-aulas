@@ -17,7 +17,7 @@ function rodarwhile(){
 function rodarfor(){
     
     let i = 0
-    for(i = 1; i<=50; i++){
+    for(i = 0; i<50; i++){
 
         console.log(i)
     }

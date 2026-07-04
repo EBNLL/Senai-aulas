@@ -1,21 +1,26 @@
-let idade = []
+let idades = []
 
 function maisiIdades(){
 
-    idade.push(Number(prompt("Qual sua idade?")))
-    console.log(idade)
-todasIdades()
+    idades.push(Number(prompt("Qual sua idade?")))
+    console.log(idades)
+    todasIdades()
 }
 function removeridades(){
-    let i = Number(prompt("de qual posição vc quer remover? " + idade))
-    
-    idade.splice(i,1)
-    console.log(idade)
+    let valor = Number(prompt("Qual idade vc quer remover? " + idades))
+    let i = idades.indexOf(valor)
+    let filtrado = idades.filter((idade) => idade != valor)
+    console.log(filtrado)
+    // idades.splice(i,1)
+    // console.log(idades)
+    idades = filtrado
     todasIdades()
 }
 function todasIdades(){
+    
     document.getElementById("suasIdade").innerHTML = ""
-    for(let i = 0; i<idade.length; i++){                                           
-    document.getElementById("suasIdade").innerHTML += "<br>" + idade[i]
+    for(let i = 0; i<idades.length; i++){                                           
+    document.getElementById("suasIdade").innerHTML += "<br>" + idades[i]
     }
+
 }
