@@ -17,7 +17,7 @@ function removeridades(){
     todasIdades()
 }
 function todasIdades(){
-    
+
     document.getElementById("suasIdade").innerHTML = ""
     for(let i = 0; i<idades.length; i++){                                           
     document.getElementById("suasIdade").innerHTML += "<br>" + idades[i]
