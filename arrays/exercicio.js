@@ -13,7 +13,7 @@ for (i = 0; i < personagens.length; i++) {
     opt.id = personagens[i]
     opt.value = personagens[i];
     opt.textContent = personagens[i];
-    
+
     seletor.appendChild(opt)
 
     //  document.getElementById("listadados").innerHTML += numeroAleatorio + "<br>"
@@ -104,6 +104,41 @@ function removerPersonagem() {
     for (i = 0; i < personagens.length; i++) {
 
         document.getElementById("lista").innerHTML += personagens[i] + "<br>"
+
+    }
+
+}
+
+function verificarPersonagens() {
+
+    let verificacao = document.getElementById("adic").value
+    let tf = personagens.includes(verificacao)
+    if (tf == true) {
+        document.getElementById("texto-p").innerHTML = verificacao + " está na lista"
+        console.log(tf)
+    }
+    else {
+        document.getElementById("texto-p").innerHTML = verificacao + " Não está na lista"
+        console.log(tf)
+    }
+}
+
+function inverterPersonagens(){
+    document.getElementById("lista").innerHTML = ""
+    const a = personagens.reverse()
+    document.getElementById("seletor").textContent =""
+    console.log(a)
+    for (i = 0; i < personagens.length; i++) {
+    
+    const opt = document.createElement("option");
+
+    opt.id = personagens[i]
+    opt.value = personagens[i];
+    opt.textContent = personagens[i];
+
+    seletor.appendChild(opt)
+    
+    document.getElementById("lista").innerHTML += personagens[i] + "<br>"
 
     }
 }
