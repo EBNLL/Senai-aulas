@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+  /* --- Cores de Destaque (Brand Colors) --- */
+  --dino-green-deep: #24463a;    /* Verde floresta denso (títulos e elementos fortes) */
+  --dino-green-light: #4a7c59;   /* Verde folha (links, subtextos importantes) */
+  --dino-amber: #ff9f1c;         /* Âmbar/Lava (cor de destaque para botões de CTA e alertas) */
+  --dino-fossil: #8b7355;        /* Marrom fóssil/terra (detalhes e bordas) */
+
+  /* --- Neutros de Fundo (Backgrounds) --- */
+  --dino-bg-bone: #f7f5f0;       /* Branco osso (fundo principal, descansa os olhos) */
+  --dino-bg-soft: #eae7dc;       /* Areia suave (fundo secundário, cards e seções) */
+
+  /* --- Cores de Texto --- */
+  --dino-text-dark: #1e2522;     /* Quase preto, mas com uma pitada de verde (texto principal) */
+  --dino-text-muted: #68706c;    /* Cinza esverdeado (textos secundários e rodapé) */
+}
+body {
+  background-color: var(--dino-bg-bone);
+  color: var(--dino-text-dark);
+  font-family: 'Inter', sans-serif;
+  
+}
+
+.card-miniatura {
+  background-color: var(--dino-bg-soft);
+  border: 1px solid var(--dino-fossil);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.btn-comprar {
+  background-color: var(--dino-amber);
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-comprar:hover {
+  background-color: var(--dino-green-light); /* Efeito invertexto clássico */
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 150px;
+  gap: 5px;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 5px;
+}
+.container-inputs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}

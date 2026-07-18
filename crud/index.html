@@ -9,14 +9,18 @@
 </head>
 
 <body>
-    <div id="form">
+    <div class="form">
+        <div class="container-inputs">
+            <label for="">id</label>
+            <input type="text" id="input-id">
+        </div>
         <div class="container-inputs">
             <label for="">Nome</label>
             <input type="text" id="input-nome">
         </div>
         <div class="container-inputs">
             <label for="">Altura</label>
-            <input type="text" id="input-altura">
+            <input type="number" id="input-altura">
         </div>
         <div class="container-inputs">
             <label for="">Cor</label>
@@ -24,12 +28,17 @@
         </div>
         <div class="container-inputs">
             <label for="">Custo</label>
-            <input type="text" id="input-custo">
+            <input type="number" id="input-custo">
         </div>
+        <div class="btn">
+            <button onclick="adicionardinos()" class="btn-comprar">Adicionar dino</button>
+            <button onclick="mostrardinos()" class="btn-comprar">Mostrar dinos</button>
+            <button onclick="removerdino()" class="btn-comprar">Remover dino</button>
+            <button onclick="procurarDino()" class="btn-comprar">Procurar dino</button>
+            <button onclick="altdino()" class="btn-comprar">Alterar dino</button>
+        </div>
+        <p id="m-d"></p>
     </div>
-    <button onclick="testar()">Teste</button>
-    <button onclick="mostrardinos()">Mostrar dinos</button>
-    <div id="m-d"></div>
 
 
     <script src="script.js"></script>
